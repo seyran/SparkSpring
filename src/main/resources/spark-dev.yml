@@ -1,0 +1,11 @@
+spark:
+  applicationName: JavaDirectKafkaAggregator
+  master: local[*]
+  bootstrapAddress: localhost:9092
+  applicationId: wordcount-application
+  windowSeconds: 1
+  kafkaTopicName: topic2
+  checkpointPath: s3a://${spark.bucketName}/${USER:}/checkpoint
+  bucketName: ctdev-onboarding-sprint5
+  metricsConfDir: @project.basedir@/src/main/resources/metrics/metrics.default.properties
+

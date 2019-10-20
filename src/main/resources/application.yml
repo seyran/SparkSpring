@@ -1,0 +1,14 @@
+spring:
+  application.name: exercise-sprint5
+  profiles:
+    active: @profile@
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, prometheus, metrics, mappings
+
+server:
+  port: 7091

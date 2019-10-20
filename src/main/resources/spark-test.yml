@@ -1,0 +1,8 @@
+spark:
+  applicationName: JavaDirectKafkaAggregator
+  master: local[*]
+  bootstrapAddress: localhost:9092
+  applicationId: wordcount-application
+  windowSeconds: 5
+  kafkaTopicName: topic2
+

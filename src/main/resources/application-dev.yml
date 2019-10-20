@@ -1,0 +1,5 @@
+app:
+  windowSeconds: 5
+  inputPath: s3a://${spark.bucketName}/${USER:}/input
+  outputPath: s3a://${spark.bucketName}/${USER:}/output
+  ScheduledExecutorService
