@@ -48,10 +48,10 @@ public class JsonToCsvJob implements SparkJob, Serializable {
                 .as(Encoders.bean(Segment.class));
 
 
-        ds.flatMap(Segment::getVisitorIdsMappedListIterator, Encoders.bean(VisitorSegment.class))
+/*        ds.flatMap(Segment::getVisitorIdsMappedListIterator, Encoders.bean(VisitorSegment.class))
                 .groupByKey((MapFunction<VisitorSegment, String>) VisitorSegment::getId, Encoders.STRING())
                 .mapValues((MapFunction<VisitorSegment, String>) VisitorSegment::getSegmentId, Encoders.STRING())
-                .agg(array_join(collect_list(col(("id"))), ";").as("segmentIds"));
+                .agg(array_join(collect_list(col(("id"))), ";").as("segmentIds"));*/
 
         ds.writeStream()
                 .option(SPARK_OUTPUT_PATH_KEY, context.getAppProperties().getOutputPath())

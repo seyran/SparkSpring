@@ -1,7 +1,7 @@
 package com.seyrancom.job;
 
-import com.seyrancom.service.SparkService;
 import com.google.common.collect.ImmutableSet;
+import com.seyrancom.service.SparkService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.spark.sql.Dataset;
@@ -13,7 +13,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
-public class AdobeToAmazonS3Job implements SparkJob, Serializable {
+public class KafkaToAmazonS3Job implements SparkJob, Serializable {
 
     @Override
     public void process(SparkService.Context context) throws Exception {
